@@ -135,7 +135,7 @@ function get_relieving_officer($pdo, $relievingEmail){
 }
 
 function get_hod_email($pdo, $unit_id){
-    $query = "SELECT email, surname, othername FROM users WHERE unit_id = ? AND role = 'hod'";
+    $query = "SELECT email, surname, othername FROM users WHERE unit_id = ? AND role = 'head'";
     $stmt = $pdo->prepare($query);
     $stmt->execute([$unit_id]);
     $hodEmail = $stmt->fetch(PDO::FETCH_ASSOC);
