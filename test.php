@@ -1,6 +1,6 @@
 <?php
 require 'config/db.php';
-require 'public/casual_model.php';
+require 'public/leave_model.php';
 $holidays = [];
 
         if(get_public_holidays($pdo)){

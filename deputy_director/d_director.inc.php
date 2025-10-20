@@ -3,7 +3,7 @@ session_start();
 require '../config/db.php';
 require '../config/send_mail.php';
 require 'd_director_model.php';
-require '../public/casual_model.php';
+require '../public/leave_model.php';
 require '../public/util.php';
 
 if ($_SESSION['role'] !== 'deputy_director') die("Access denied.");
@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }else{
             $fromEmail = "noreply@oaucdl.edu.ng";
 
-// ======= Get applicant email from ../public/casual_model.php' =====================================
+// ======= Get applicant email from ../public/leave_model.php' =====================================
             $hod_details = get_hod_email($pdo, $_SESSION['unit_id']);
             $appsDetails = get_leave_app_details($pdo, $id);
             $appEmail = get_applicant_email($pdo, $appId);

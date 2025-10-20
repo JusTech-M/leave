@@ -2,7 +2,7 @@
 session_start();
 require '../config/db.php';
 require '../config/send_mail.php';
-require 'casual_model.php';
+require 'leave_model.php';
 require 'leave_contr.php';
 
 if($_SERVER["REQUEST_METHOD"]=="POST"){

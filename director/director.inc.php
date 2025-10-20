@@ -3,7 +3,7 @@ session_start();
 require '../config/db.php';
 require '../config/send_mail.php';
 require 'director_model.php';
-require '../public/casual_model.php';
+require '../public/leave_model.php';
 require '../public/util.php';
 require '../dompdf/autoload.inc.php';
 require '../tcpdf/tcpdf.php';
@@ -119,7 +119,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }else{
            
 
-// ======= Get applicant email from ../public/casual_model.php' =====================================
+// ======= Get applicant email from ../public/leave_model.php' =====================================
 
             $appEmail = get_applicant_email($pdo, $appId);
             $subject = "Leave Request Rejected";

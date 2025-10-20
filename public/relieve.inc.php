@@ -2,7 +2,7 @@
 session_start();
 require '../config/db.php';
 require '../config/send_mail.php';
-require 'casual_model.php';
+require 'leave_model.php';
 if ($_SESSION['role'] !== 'staff') die("Access denied.");
 
 

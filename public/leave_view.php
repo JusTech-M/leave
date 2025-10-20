@@ -1,6 +1,6 @@
 <?php
 require '../config/db.php';
-require 'casual_model.php';
+require 'leave_model.php';
 function display_form_submit(){
     if(isset($_GET['form']) && $_GET['form'] === 'submitted'){
     echo '<br>';

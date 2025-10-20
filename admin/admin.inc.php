@@ -3,7 +3,7 @@ session_start();
 require '../config/db.php';
 require '../config/send_mail.php';
 require 'admin_model.php';
-require '../public/casual_model.php';
+require '../public/leave_model.php';
 require '../public/util.php';
 require '../dompdf/autoload.inc.php';
 //require '../tcpdf/tcpdf.php';
@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }elseif($action === "reject"){
             $fromEmail = "noreply@oaucdl.edu.ng";
 
-// ======= Get applicant email from ../public/casual_model.php' =====================================
+// ======= Get applicant email from ../public/leave_model.php' =====================================
             $appDetails = get_leave_app_details($pdo, $id);
             $appEmail = get_applicant_email($pdo, $appId);
             $subject = "Leave Request Rejected";

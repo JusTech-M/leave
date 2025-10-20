@@ -1,7 +1,7 @@
 <?php
 session_start();
 require '../config/db.php';
-//require 'casual_model.php';
+//require 'leave_model.php';
 require 'leave_view.php';
 require 'util_view.php';
 if(!isset($_SESSION['role'])) header("Location: ../login/login.php");

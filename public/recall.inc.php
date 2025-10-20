@@ -3,7 +3,7 @@
 session_start();
 require '../config/db.php';
 require '../config/send_mail.php';
-require 'casual_model.php';
+require 'leave_model.php';
 require 'leave_contr.php';
 require 'util_view.php';
 require 'util.php';
