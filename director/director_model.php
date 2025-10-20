@@ -20,6 +20,17 @@ function update_leave_app($pdo, $note, $id, $action){
     
 }
 
+function update_resumption_date($pdo, $id, $action, $resumption){
+    if($action ==="approve"){
+        $stmt = $pdo->prepare("UPDATE leave_applications SET resumption_date=? WHERE id=?");
+        $stmt->execute([$resumption, $id]);
+    }else{
+        $stmt = $pdo->prepare("UPDATE leave_applications SET resumption_date='' WHERE id=?");
+        $stmt->execute([$id]);
+    }
+    
+}
+
 function get_director_email($pdo){
     $query = "SELECT email, surname, othername FROM users WHERE role = 'director'";
     $stmt = $pdo->prepare($query);

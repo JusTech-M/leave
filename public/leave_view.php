@@ -150,4 +150,13 @@ function comment($status){
     }
 }
 
+function not_onLeave(){
+    if(isset($_SESSION['not_onLeave'])){
+    echo '<br>';
+    echo '<div class="alert alert-error">'.$_SESSION['not_onLeave'].'</div>';
+
+    unset($_SESSION['not_onLeave']);
+}
+
+}
 

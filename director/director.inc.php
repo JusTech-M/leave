@@ -54,7 +54,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $fromEmail = "noreply@oaucdl.edu.ng";
             $subject1 = "Leave Approved";
             $message1 = "Dear {$appEmail['surname']} {$appEmail['othername']},\n\nYour leave application has been approved. Please find your approval letter attached.\n\nRegards,\nLeave Management System";
-            sendNotification($appEmail['email'], $subject1, $message1, $fromEmail);
+            $attachment = "../generated_letters/approval_letter_" . $appEmail['ref_no'] . ".pdf";
+            sendNotification($appEmail['email'], $subject1, $message1, $fromEmail, $attachment);
 
             $adminEmail = get_admin_email($pdo);
             //$fromEmail = "noreply@oaucdl.edu.ng";
@@ -106,11 +107,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $startDate     = formatDateReadable($app['start_date']);
             $endDate       = formatDateReadable($app['end_date']);
             $resumptionDate = formatDateReadable(calculateResumptionDate($endDate, $pdo));
-
+            $resume = calculateResumptionDate($app['end_date'], $pdo);
+            update_resumption_date($pdo, $id, $action, $resume);
 
 
             // =================== Generate Approval Letter ==========================================
-            include '../pdf/dompdf.php';
+            //include '../pdf/dompdf.php';
             include '../tcpdf.php';
 
 

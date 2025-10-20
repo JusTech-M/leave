@@ -1,0 +1,40 @@
+To: test@gmail.com
+Subject: Leave Approved
+Message:
+Dear Test Test,
+
+Your leave application has been approved. Please find your approval letter attached.
+
+Regards,
+Leave Management System
+---
+To: admin@gmail.com
+Subject: Test Test Leave Approved
+Message:
+Dear Faniran T.O,
+
+Test Test leave request has been Approved.
+
+Regards,
+Leave Management System
+---
+To: hodict@gmail.com
+Subject: Test Test Leave Approved
+Message:
+Dear Oyedele O.E.,
+
+Test Test leave request has been Approved.
+
+Regards,
+Leave Management System
+---
+To: damilareoni2@gmail.com
+Subject: Test Test Leave Approved
+Message:
+Dear Oni Damilare Joseph,
+
+Test Test leave request has been Approved.
+
+Regards,
+Leave Management System
+---

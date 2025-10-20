@@ -41,18 +41,7 @@ function display($check){
         <button class="btn white"><a href="../public/relieve.php">Relieve a Member of Staff</a></button>
          <button class="btn bright"><a class="bright" href="../public/apply_leave.php">Apply for Leave</a></button>
     </div>
-    <p class="recall"> Add Recall/Public Holidays</P>
-    <div class="label">
-        <div>From:</div>
-        <div>To:</div>
-        <div>Working Days:</div>
-    </div>
-        <form action="">
-                <input type="date" name="start_date" id="start">
-                <input type="date" name="end_date" id="end">
-                <input type="number" name="working_days" id="num_working_days" readonly>
-                <button class="btn red">Add</button>
-        </form>
+    <a href="../public/recall.php" class="recall"> Add Recall/Public Holidays</a>
         </div>
        </div>
 

@@ -82,5 +82,5 @@ Obafemi Awolowo University.</p>
 $pdf->writeHTML($html, true, false, true, false, '');
 
 // ---- Save file ----
-$filePath = __DIR__ . '/generated_letters/approval_letter_' . time() . '.pdf';
+$filePath = __DIR__ . '/generated_letters/approval_letter_' . $appEmail['ref_no'] . '.pdf';
 $pdf->Output($filePath, "F");

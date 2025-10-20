@@ -176,3 +176,19 @@ function updateStatus_ifProg($pdo){
 }
 //var_dump(get_applicant_details($pdo, "damilareoni2@gmail.com"));
 
+// ====================== Recall/Public Holidays ====================================
+
+function submit_recall_form($pdo, $unit_id, $applicantName, $designation, $department, $startDate, $endDate, $TotalWorkingDays, $recallPurpose, $user_id, $leaveId){
+    $query = "INSERT INTO recall_publicHolidays (unit_id, employee_name, designation, department, start_date, end_date, total_working_days, recall_purpose, user_id, leave_app_id) VALUES (?,?,?,?,?,?,?,?,?,?);" ;
+    $stmt = $pdo->prepare($query);
+    $stmt->execute([$unit_id, $applicantName, $designation, $department, $startDate, $endDate, $TotalWorkingDays, $recallPurpose, $user_id, $leaveId]);
+}
+
+function get_approved_leave($pdo, $unit_id){
+    $stmt = $pdo->prepare("SELECT la.*, u.surname, u.othername FROM leave_applications la 
+    JOIN users u ON la.user_id=u.id 
+    WHERE u.unit_id=? AND la.status='Approved' AND la.relieving_officer_status='Accepted'");
+    $stmt->execute([$unit_id]);
+    $apps = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return  $apps;
+}

@@ -70,3 +70,37 @@ function applicant_details_casual($pdo, $unit_id, $type){
     //$count = 1;
     
 }
+
+function get_recall_publicHolidays($pdo, $unit_id){
+    $recall_details = get_recall_request($pdo, $unit_id);
+    $count = 1;
+    if($recall_details){
+     $unit_id = $_SESSION['unit_id'];   
+    foreach($recall_details as $apps){
+              echo '<div>'.$count.'</div>
+                <div>'.$apps["employee_name"].'</div>
+                <div>'.$apps["designation"].'</div>
+                <div>'.$apps["start_date"].'</div>
+                <div>'.$apps["end_date"].'</div>
+                <div>'.$apps["total_working_days"].'</div>
+                <div>'.$apps['recall_purpose'].'</div>
+                <div><form method="post" action="head.inc.php" class="note">
+                            <input type="hidden" name="id" value="'.$apps['id'].'">
+                            <input type="hidden" name="unit_id" value="'.$unit_id.'">
+                            <textarea name="note" placeholder="Comment" ></textarea><br>
+                            <button name="action" value="approve_recallRequest" class="btn yellow">Approved</button>
+                            <button name="action" value="reject_recallRequest" class="btn normal">Reject</button>
+                        </form></div>';
+
+
+             $count +=1;   
+
+    }
+
+    }else{
+            echo '<div class="no_leave"> No Recall </div>';
+        }
+    //$count = 1;
+    
+}
+
