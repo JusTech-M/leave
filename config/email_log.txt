@@ -943,3 +943,56 @@ For the following reason
 Regards,
 Leave Management System
 ---
+To: damilareoni2@gmail.com
+Subject: Request to Relieve a Member of Staff
+Message:
+Dear Oni Damilare Joseph,
+
+A new leave request has been submitted.
+Please review it.
+
+Regards,
+Leave Management System
+---
+To: hodict@gmail.com
+Subject: Pending Leave Request from Member of Staff
+Message:
+Dear Oyedele O.E.,
+
+A leave request has been submitted.
+
+Regards,
+Leave Management System
+---
+To: admin@gmail.com
+Subject: Pending Leave Request From a Member of Staff
+Message:
+Dear Adminisrative Secretaty,
+
+A new leave request has been submitted.
+Please review it.
+
+Regards,
+Leave Management System
+---
+To: damilareoni2@gmail.com
+Subject: Request to Relieve a Member of Staff
+Message:
+Dear Oni Damilare Joseph,
+
+A new leave request has been submitted.
+Please review it.
+
+Regards,
+Leave Management System
+---
+To: hodict@gmail.com
+Subject: Pending Leave Request from Member of Staff
+Message:
+Dear Oyedele O.E.,
+
+A leave request has been submitted.
+
+Regards,
+Leave Management System
+---

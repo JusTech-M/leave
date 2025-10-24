@@ -7,7 +7,7 @@ require 'director_view.php';
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Pending Requests</title>
+  <title>Director Pending Requests</title>
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>

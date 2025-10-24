@@ -16,6 +16,15 @@ function get_units($pdo){
 
 }
 
+function get_unitId_by_name($pdo, $unit_name) {
+    if (empty($unit_name)) return null;
+    $stmt = $pdo->prepare("SELECT id FROM units WHERE unit_name = ?");
+    $stmt->execute([$unit_name]);
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+    return $row ? $row['id'] : null;
+}
+
+
 function get_email(object $pdo, string $email){
     $query = 'SELECT email FROM users WHERE email = ?;';
     $stmt = $pdo->prepare($query);

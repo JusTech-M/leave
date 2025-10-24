@@ -45,9 +45,9 @@ body{
     
 }
 
-.dashboard{
-    text-transform: uppercase;
-}
+/*.dashboard{
+    text-transform: capitalize;
+}*/
 
 .welcome{
     text-align: center;
@@ -72,7 +72,6 @@ body{
 .background .top a{
     text-decoration: none;
     color: white;
-    text-transform: uppercase;
     font-weight: bolder;
     font-size: 32px;
 }
@@ -114,6 +113,7 @@ body{
     border:none;
     margin-bottom: 20px;
     outline: none;
+    cursor: pointer;
 }
 
 form{

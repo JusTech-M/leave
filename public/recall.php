@@ -25,7 +25,7 @@ function display_unit($units, $index){
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Apply for Leave</title>
+    <title>Add recall/public holiday</title>
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>

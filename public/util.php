@@ -41,6 +41,14 @@ function get_users_leave_approved($pdo, $user_id){
     return $users_id;
 }
 
+function get_unit_id_by_name($pdo, $unit_name){
+    $query = "SELECT id FROM units WHERE unit_name = ?";
+    $stmt = $pdo->prepare($query);
+    $stmt->execute([$unit_name]);
+    $users = $stmt->fetch(PDO::FETCH_ASSOC);
+    return $users;
+}
+
 // ======================================= Extend the based on the number of days worked =========================================================================
             function addWorkingDays($date, $days) {
                 $current = new DateTime($date);
