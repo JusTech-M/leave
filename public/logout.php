@@ -1,5 +1,11 @@
 <?php
 session_start();
-session_destroy();
-header("Location: ../login/login.php");
+
+if($_SESSION['role'] === 'tech'){
+    session_destroy();
+    header("Location: ../tech/index.php");
+}else{
+    session_destroy();
+    header("Location: ../login/login.php");
+}
 exit;

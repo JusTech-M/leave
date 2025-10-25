@@ -1,5 +1,13 @@
 <?php
 
+function get_user($pdo, $username){
+    $stmt =$pdo->prepare("SELECT * FROM tech_users WHERE username=? LIMIT 1;");
+    $stmt->execute([$username]);
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+    return $user;
+}
+
+
 function deleteUser($pdo, $appID){
     $query = "DELETE FROM users WHERE ref_no=?";
     $stmt = $pdo->prepare($query);

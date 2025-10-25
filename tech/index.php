@@ -1,6 +1,6 @@
 <?php 
 session_start();
-//require 'login_view.php';
+require 'tech_view.php';
 
 ?>
 <!DOCTYPE html>
@@ -11,10 +11,10 @@ session_start();
   <h2>Login</h2>
  <div class="main">
   <div class="login">
-     <?php //check_login_errors(); ?>
-  <form method="post" action="login.inc.php">
-    <!--<label>Email: </label>--><input type="email" name="email" placeholder="Email" required><br>
-    <!--<label>Password: </label>--><input type="password" name="password" placeholder="password" required><br>
+     <?php check_login_errors(); ?>
+  <form method="post" action="index.inc.php">
+    <input type="text" name="username" placeholder="Username" required><br>
+    <input type="password" name="password" placeholder="password" required><br>
     <button type="submit" class="btn primary">Login</button>
   </form>
   <p>Don't have an account? <a class="primary" href="../register/register.php">Register</a></p>

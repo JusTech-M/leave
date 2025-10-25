@@ -8,12 +8,250 @@
   font-family: "Barlow", sans-serif;
 }
 
+.container{
+
+}
+
+.head{
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    background-color: #07405e;
+    color: white;
+    align-items: center;
+    padding: 0px 20px;
+
+}
+
+.head .logo{
+    height: 60%;
+    background: white;
+    border-radius: 50%;
+}
+
+.head h3{
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+.head .profile{
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.head .profile .notify_icon{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: white;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.head .profile .notify_icon .alart{
+    position: absolute;
+    background: red;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    bottom: 80%;
+    right: 20%;
+}
+
+.head .profile .pic{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0px 10px;
+}
+
+.head .profile .notify_icon img{
+    height: 50%;
+}
+
+.head img{
+    height: 100%;
+}
+
+
+
+/*======================== Main body ============================================*/
+
+.main{
+    display: flex;
+    height: 90vh;
+}
+
+.main .sidebars{
+    width: 20vw;
+    border-top: 1px solid white;
+    background-color: #07405e;
+    display: flex;
+    flex-direction: column;
+}
+
+.main .sidebars .profile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height:10vh ;
+    padding: 20px 20px;
+}
+
+.main .sidebars .profile .pic{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .sidebars .profile .greet{
+    color: white;
+    font-size: 20px;
+    width: 70%;
+}
+
+.main .sidebars .profile .greet span{
+    font-weight: 600;
+}
+
+.main .sidebars .profile .pic img{
+    width: 80%;
+}
+
+.main .sidebars .profile {
+    width: 100%;
+}
+
+.main .sidebars .navmenu{
+    width: 100%;
+    margin-top:20px ;
+}
+
+.main .sidebars .navmenu nav ul{
+    list-style-type: none;
+}
+
+.main .sidebars .navmenu nav ul li{
+    padding: 20px 20px;
+    position: relative;
+    
+}
+
+.main .sidebars .navmenu nav ul li:hover{
+    background-color: #333333;
+}
+
+.main .sidebars .navmenu nav ul li:hover::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 5px;
+    background: #2ab39c;
+    right: 0%;
+    top:0%;
+
+}
+
+
+.main .sidebars .navmenu nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.color1{
+    background: #00c0ef;
+}
+
+.color2{
+    background: #00a65a;
+}
+
+.color3{
+    background: #dd4c39
+;
+}
+
+.color4{
+    background: #f29d0e
+;
+}
+
+.grid .summary{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    color: white;
+    font-size: 20px;
+}
+
+
+.grid .summary .text span{
+    margin-bottom: 40px;
+}
+
+.grid .summary .icon{
+    width: 10%;
+
+}
+
+.grid .summary .icon img{
+    width: 100%;
+
+}
+
+
 .wrapper{
     width:90%;
     margin: auto;
     padding: 20px 40px;
     margin-top: 20px;
     border: 1px solid rgb(180, 180, 180);
+}
+
+.wrapper .background .top{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.wrapper .background .top a{
+    color: #07405e;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.wrapper .background .top .dashbord{
+    font-family: "Comfortaa";
+}
+
+.wrapper .background .top a:hover{
+    color:#dd4c39 ;
 }
 
 .wrapper h3{
@@ -108,6 +346,6 @@
 .grid_table div{
     text-align: justify;
     padding:5px 10px;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 500;
 }

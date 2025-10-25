@@ -1,6 +1,21 @@
 <?php
 require '../config/db.php';
 require '../register/register_model.php';
+
+function check_login_errors(){
+    if(isset($_SESSION['errors_login'])){
+        echo '<br>';
+        $errors = $_SESSION['errors_login'];
+        foreach ($errors as $error) {
+            echo "<div class='alert alert-error' id='error'>{$error}</div>";
+
+        }
+
+        unset($_SESSION['errors_login'] );
+    }
+
+}
+
 function displayError(){
     if(isset($_SESSION['errors'])){
         $errors = $_SESSION['errors'];

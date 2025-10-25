@@ -294,7 +294,7 @@ table tr th, table tr td{
 
 .container .grid_table div, .container .grid_table_relieve div, .container .grid_table_pending div{
     padding: 10px;
-    text-align: justify;
+    text-align: right;
 }
 
 .container .grid_table_relieve div, .container .grid_table_pending div{
