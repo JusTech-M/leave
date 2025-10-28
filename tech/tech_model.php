@@ -21,3 +21,13 @@ function userRefNum($pdo, $appID, $email, $unitId){
     $stmt = $stmt->fetchAll(PDO::FETCH_ASSOC);
     return $stmt;
 }
+
+function add_user($pdo, $username, $email, $password){
+    $query = "INSERT INTO tech_users (username, email, password) VALUES (?,?,?)";
+    $stmt = $pdo->prepare($query);
+     $options = [
+        'cost' => 12
+    ];
+    $hashedpassword = password_hash($password, PASSWORD_BCRYPT, $options);
+    $stmt->execute([$username, $email, $hashedpassword]);
+}

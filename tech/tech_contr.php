@@ -25,3 +25,27 @@ function is_password_wrong($pass, $hashedpassword){
     }
 }
 
+function is_input_fields_empty($username, $email, $password, $confirmPassword){
+    if(empty($username) || empty($email) || empty($password) || empty($confirmPassword)){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+function is_username_taken($result){
+    if($result){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+function is_email_invalid($email){
+     if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+        return true;
+     } else {
+        return false;
+     }
+   
+}

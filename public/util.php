@@ -61,3 +61,19 @@ function get_unit_id_by_name($pdo, $unit_name){
             }
 
 
+function get_user_to_edit($pdo, $appId){
+    $query = "SELECT * FROM users WHERE id = ? ";
+    $stmt = $pdo->prepare($query);
+    $stmt->execute([$appId]);
+    $appEmail = $stmt->fetch(PDO::FETCH_ASSOC);
+    return $appEmail;
+
+}
+
+function get_units($pdo){
+    $units = $pdo->query("SELECT * FROM units")->fetchAll(PDO::FETCH_ASSOC);
+    return $units;
+
+}
+
+

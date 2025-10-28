@@ -1,44 +1,58 @@
 <?php
 session_start();
+require '../public/util_view.php';
 if(!isset($_SESSION['role'])) header("Location: ../login/login.php");
 if ($_SESSION['role'] !== 'director') die("Access denied.");
 ?>
 
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Director's page</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
-</head>
-<body>
-    <div class="wrapper">
-        <div class="background">
-            <div class="top">
-                <h1 class="dashboard">Director Dashboard</h1>
-                <a class="" href="../public/logout.php">Logout</a>
+<?php 
+    $html = '<div class="summary color1">
+                <div class="text">
+                    <span>200</span><br><br>
+                    <p>Total No. of Staff</p>
                 </div>
-            <div class="">
-            
-                <?php echo "<h1 class='welcome'> Welcome Director</h1>"?>
-            
+                <div class="icon">
+                <img src="../img/user.png" alt="">
+                </div>
+
+        
             </div>
 
-       <div class="action">
-        <button class="btn bright"><a class="bright" href="pending_requests.php"> Pending Leave Request </a></button>
-        <button class="btn red" id="clear"> Reset Leave </button>
+            <div class="summary color2">
+                <div class="text">
+                    <span>22</span><br><br>
+                    <p>Total No. of Leave Applicant</p>
+                </div>
+                <div class="icon">
+                <img src="../img/user.png" alt="">
+                </div>
 
-        <div id="confirm">
-            <p>Are you sure you want to Reset Leave for all staff?</p>
-            <form action="clear_leave.php" method = "GET"><button class="btn normal" id="yes_action" name="clear">Reset</button></form>
-            <button class="btn bright" id="back">Back</button>
-        </div>
-    </div>
-        </div>
-       </div>
+        
+            </div>
 
-<script src="../assets/js/clear.js"></script>
-</body>
-</html>
+            <div class="summary color3">
+                <div class="text">
+                    <span>20</span><br><br>
+                    <p>Total Appoved Leave</p>
+                </div>
+                <div class="icon">
+                <img src="../img/user.png" alt="">
+                </div>
+
+        
+            </div>
+
+            <div class="summary color4">
+                <div class="text">
+                    <span>2</span><br><br>
+                    <p>Total Rejected Leave</p>
+                </div>
+                <div class="icon">
+                <img src="../img/user.png" alt="">
+                </div>
+
+        
+            </div>';
+?>
+
+<?php include "../include/dashboard_director.php";?>

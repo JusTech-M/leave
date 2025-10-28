@@ -43,6 +43,17 @@ function get_recall_request($pdo){
     return  $apps;
 }
 
+function clear_leave($pdo, $usedCasual, $totalLeaveUsed){
+    $query = "UPDATE users SET leeav_entitlement = CASE level 
+    WHEN 'snr' THEN 42
+    WHEN 'jnr_5&6' THEN 30
+    WHEN 'jnr_1-4' THEN 26
+    ELSE leeav_entitlement
+    END, num_casual_leave = ?, num_used_leave = ?";
+    $stmt = $pdo->prepare($query);
+    $stmt->execute([$usedCasual, $totalLeaveUsed]);
+}
+
 
 
 

@@ -21,6 +21,10 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
                 $errors["wrong_username"] = "User does not exist!";
             }
 
+            if(!is_username_wrong($user) && is_password_wrong($pass, $user['password'])){
+                $errors["invalid_login"] = "Password is incorrect!";
+            }
+
             // if(!is_email_wrong($user) && is_password_wrong($pass, $user['password'])){
             //         $errors["login_incorrect"] = "Email or Password Incorrect!";
             // }

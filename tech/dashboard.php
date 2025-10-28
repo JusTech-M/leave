@@ -45,10 +45,11 @@ session_start();
         <div class="navmenu">
             <nav>
                 <ul>
-                    <li><a href="">Add Member</a></li>
+                    <li><a href="../register/register.php">Add Member</a></li>
                     <li><a href="delete_user.php">Delete Member</a></li>
                     <li><a href="update_user.php">Update Member profile</a></li>
                     <li><a href="upload.php">Upload staff list</a></li>
+                    <li><a href="add_tech_officer.php">Add Tech Officer</a></li>
                 </ul>
             </nav>
         </div>
@@ -112,8 +113,8 @@ session_start();
             
         </div>
         </div>
-</div>
-</div>
+        </div>
+        </div>
 </div>
 
 

@@ -20,7 +20,7 @@ if(!isset($_SESSION['role'])) header("Location: ../login/login.php");
     <div class="container">
         <div class="head">
             <!-- idrole from util_view.php -->
-            <a href="../<?php idrole($_SESSION['role']); ?>/dashboard.php" class="btn primary">Dashboard</a>
+            <a href="../<?php echo idrole($_SESSION['role']); ?>/dashboard.php" class="btn primary">Dashboard</a>
         </div>
         <div class="status">
             <p>List Of Staff That Want You To Relieve Them</p>

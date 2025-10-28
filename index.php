@@ -9,7 +9,7 @@
   <h1 style="color:blue; margin: 20px 0px;">Leave Management System</h1>
   <div>
     <a class="btn primary" href="login/login.php">Login</a>
-    <a class="btn primary" href="register/register.php">Register</a>
+    <!-- <a class="btn primary" href="register/register.php">Register</a> -->
   </div>
 </div>
 </body>

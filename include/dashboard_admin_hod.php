@@ -1,51 +1,85 @@
 
 <?php
-function idrole($role){
-    if($role === "admin") echo "Admin";
-    if($role === "head") echo "HOD";
-}
+// function idrole($role){
+//     if($role === "admin") return "Admin Sec";
+//     if($role === "head") return "HOD";
+// }
 
-$leaveDetails = get_app($pdo, $_SESSION['user_id']);
 
-function display($check){
-    $value = empty($check)?0:$check;
-    return $value;
-}
+
+function displayRole(){
+            if(idrole($_SESSION['role']) === 'admin'){
+                return "<h1 class='welcome'> Welcome to Administrative Secretary Dashboard</h1>";
+            }else{
+                return  "<h1 class='welcome'> Welcome to HOD Dashboard</h1>";
+            }
+        }
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php idrole($_SESSION['role']); ?></title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <title><?php echo idrole($_SESSION['role']); ?></title>
+    <link rel="stylesheet" href="../assets/css/tech.css">
+    
 </head>
 <body>
+
+    <div class="container">
+    <div class="head">
+        <div class="logo"><img src="../img/img.png" alt=""></div>
+        <!-- <h3>Staff dashboard</h3> -->
+        <div class="profile">
+            <div class="notify_icon">
+                <img src="../img/notification.png" alt="">
+                <div class="alart">1</div>
+            </div>
+            <div class="pic"><img src="../img/user.png" alt=""></div>
+            <div class="admin_action">
+                 <?php echo "<span>" . idrole($_SESSION['role']) . "</span>"?>
+            </div>
+        </div>
+    </div>
+
+<div class="main">
+    <div class="sidebars">
+        <div class="profile">
+            <div class="pic"><img src="../img/user.png" alt=""></div>
+            <div class="greet">
+                Welcome! <br><span> <?php echo idrole($_SESSION['role'])?></span>
+            </div>
+        </div>
+
+        <div class="navmenu">
+            <nav>
+                <ul>
+                    <li><a class="" href="../public/apply_leave.php">Apply for Leave</a></li>
+                    <li><a class="" href="../public/leave_status.php">Track Leave</a></li>
+                    <li><a href="../public/relieve.php">Relieve a Member of Staff</a></li>
+                    <li><a href="../public/recall.php" class="recall"> Add Recall/Public Holidays</a></li>
+                    <li><a class="" href="pending_requests.php">Pending Leave Request </a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+
     <div class="wrapper">
         <div class="background">
             <div class="top">
-                <h1 class="dashboard"><?php idrole($_SESSION['role']); ?> Dashboard</h1>
-                <a class="" href="../public/logout.php">Logout</a>
-                </div>
-            <div class="">
-            
-                <?php echo "<h1 class='welcome'> Welcome " . $_SESSION['name'] . "</h1>"?>
-            
+                <?php echo displayRole(); ?>
+                  <a class="" href="../public/logout.php">Logout</a>
             </div>
 
-            <div class="leave_details">
-             <p>No. of Outstanding Leave: <span><?php echo display($leaveDetails['leeav_entitlement']) ?></span></p>
-            <p>No. of used Casual Leave: <span><?php echo display($leaveDetails['num_casual_leave'])?></span></p>
-            <p>Total No. of used Leave: <span><?php echo display($leaveDetails['num_used_leave']) ?></span></p>
-
+        <div class="grid">
+            <?php echo displayHtml($html); ?>
         </div>
-
-       <div class="action">
-        <button class="btn white"><a class="white" href="../public/leave_status.php">Track Leave</a></button>
-        <button class="btn white"><a  href="../public/apply_leave.php">Apply for Leave</a></button>
-        <button class="btn bright"><a class="bright" href="pending_requests.php">Pending Leave Request </a></button>
-    </div>
         </div>
-       </div>
+        </div>
+        </div>
+</div>
+
+<script src="../assets/js/clear.js"></script>
 </body>
 </html>
