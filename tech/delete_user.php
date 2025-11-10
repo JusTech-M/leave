@@ -2,6 +2,7 @@
 
 session_start();
 require '../config/db.php';
+require '../public/util.php';
 require 'tech_view.php';
 ?>
 <!DOCTYPE html>
@@ -17,7 +18,7 @@ require 'tech_view.php';
     <div class="">
         <div class="wrapper">
         <form action="search.inc.php" method="post">
-        <h3>DELETE USERS</h3>
+        <h3>UPDATE/DELETE USERS</h3>
         <input type="text" name="app_id" placeholder="Enter User Email/Reference Number"><button class="btn bright">Search</button>
         </form>
 

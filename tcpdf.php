@@ -54,7 +54,7 @@ Ile-Ife.</p>
 <p>The above subject matter refers.</p>
 
 <p>I write to convey the Director’s approval for you to proceed on 
-<b>{$app['working_days']} working days</b> of leave, 
+<b>{$app['working_days']} working day(s)</b> of leave, 
 being part of your Annual Leave for " . date('Y') . ".</p>
 
 <p>The leave period spans between <b>{$startDate}</b> and 
@@ -79,8 +79,10 @@ Obafemi Awolowo University.</p>
 <p><b>Cc:</b> {$app['relieving_officer']}, for your information please.</p>
 ";
 
+$cleanRef = preg_replace('/[^A-Za-z0-9_\-]/', '_', $appEmail['ref_no']);
+
 $pdf->writeHTML($html, true, false, true, false, '');
 
 // ---- Save file ----
-$filePath = __DIR__ . '/generated_letters/approval_letter_' . $appEmail['ref_no'] . '.pdf';
+$filePath = __DIR__ . '/generated_letters/approval_letter_' . $cleanRef . '.pdf';
 $pdf->Output($filePath, "F");

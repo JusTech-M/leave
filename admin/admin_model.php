@@ -11,8 +11,8 @@ function get_leave_request($pdo){
 
 function update_leave_app($pdo, $note, $id, $action){
     if($action ==="approve"){
-        $stmt = $pdo->prepare("UPDATE leave_applications SET status='Pending Admin Approval', hod_recommendation=? WHERE id=?");
-        $stmt->execute([$note, $unit_id, $id]);
+        $stmt = $pdo->prepare("UPDATE leave_applications SET status='Pending Director Approval', hod_recommendation=? WHERE id=?");
+        $stmt->execute([$note, $id]);
     }elseif($action ==="reject"){
         $stmt = $pdo->prepare("UPDATE leave_applications SET status='Rejected', hod_recommendation=? WHERE id=?");
         $stmt->execute([$note, $id]);

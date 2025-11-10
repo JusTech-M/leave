@@ -46,8 +46,7 @@ session_start();
             <nav>
                 <ul>
                     <li><a href="../register/register.php">Add Member</a></li>
-                    <li><a href="delete_user.php">Delete Member</a></li>
-                    <li><a href="update_user.php">Update Member profile</a></li>
+                    <li><a href="delete_user.php">Update / Delete a Member of Staff</a></li>
                     <li><a href="upload.php">Upload staff list</a></li>
                     <li><a href="add_tech_officer.php">Add Tech Officer</a></li>
                 </ul>

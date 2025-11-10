@@ -27,7 +27,3 @@ function display($check){
     $value = empty($check)?0:$check;
     return $value;
 }
-
-function adminSec(){
-    
-}

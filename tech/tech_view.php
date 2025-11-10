@@ -1,6 +1,6 @@
 <?php
-require '../config/db.php';
-require '../register/register_model.php';
+//require '../config/db.php';
+//require '../register/register_model.php';
 //require '../register/register_view.php';
 
 function check_login_errors(){
@@ -124,12 +124,12 @@ function search_user($pdo){
 
 function display_units($pdo){
     $units = get_units($pdo);
-
+    
     foreach($units as $unit){
-        $option = '<option value="'.$unit['id'].'">'.htmlspecialchars($unit['unit_name']).'</option>';
+        return '<option value="'.$unit['id'].'">'.htmlspecialchars($unit['unit_name']).'</option>';
     }
 
-    return $option;
+    //return $option;
 }
 
 function display_level($level){
@@ -152,36 +152,11 @@ function display_level($level){
 }
 
 
-function display_user_to_edit($pdo, $user){
+function display_user_to_edit($pdo){
     if(isset($_GET['id'])){
-
-        echo '<form method="post" action="update.inc.php">
-    <label>Surname</label><input type="text" name="surname" value="'.$user['surname'].'" required><br>
-    <label>Othername</label><input type="text" name="othername" value="'.$user['othername'].'" required><br>
-    <label>Reference No.</label><input type="text" name="ref_no" value="'.$user['ref_no'].'" required><br>
-    <label>Email</label><input type="email" name="email" value="'.$user['email'].'" required><br>
-    <label>Role</label>
-    <select name="role" id="role" required>
-      <option value="">-- Select role --</option>
-      <option value="staff">Staff</option>
-      <option value="program_coordinator">Program Coordinator</option>
-      <option value="head">HOD</option>
-      <option value="admin">Admin</option>
-      <option value="deputy_director">Deputy Director</option>
-      <option value="director">Director</option>
-    </select><br>
-
-    <label>Unit</label>
-    <select name="unit_id" id="unit" required>
-      <option value="">-- Select Unit --</option>'.display_units($pdo).'</select><br>
-     <label>Level</label>
-    <select name="level" id="level" required>'.display_level($user['level']).'</select><br>
-
-    <label>Password</label><input type="password" name="password" required><br>
-    <label>Confirm Password</label><input type="password" name="confirm_password" required><br>
-   
-    <button type="submit" class="btn primary">Submit</button>
-  </form>';
+        $id = $_GET['id'];
+        $user = get_user_to_edit($pdo, $id);
+        return $user;
     }
 }
 
