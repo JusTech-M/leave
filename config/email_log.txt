@@ -11,14 +11,14 @@ Leave Management System
 To: hodict@gmail.com
 Subject: Pending Leave Request from Member of Staff
 Message:
-Dear Oyedele O.E.,
+Dear Oyelede T.O..,
 
 A leave request has been submitted.
 
 Regards,
 Leave Management System
 ---
-To: admin@gmail.com
+To: admin1234@gmail.com
 Subject: Pending Leave Request From a Member of Staff
 Message:
 Dear Adminisrative Secretaty,
@@ -29,7 +29,7 @@ Please review it.
 Regards,
 Leave Management System
 ---
-To: director@gmail.com
+To: director123@gmail.com
 Subject: Pending Leave Request From a Member of Staff
 Message:
 Dear Administrative Secretary,
@@ -40,7 +40,7 @@ Please review it.
 Regards,
 Leave Management System
 ---
-To: damilareoni2@gmail.com
+To: dammmy@gmail.com
 Subject: Leave Approved
 Message:
 Dear Oni Damilare Joseph,
@@ -50,7 +50,7 @@ Your leave application has been approved. Please find your approval letter attac
 Regards,
 Leave Management System
 ---
-To: admin@gmail.com
+To: admin123@gmail.com
 Subject: Oni Damilare Joseph Leave Approved
 Message:
 Dear Faniran T.O,
